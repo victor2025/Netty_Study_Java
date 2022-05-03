@@ -58,6 +58,12 @@ public class GroupChatServer {
         }
     }
 
+    /**
+     * @return: void
+     * @author: victor2022
+     * @date: 2022/5/3 上午11:01
+     * @description: 监听事件
+     */
     public void listen(){
         try{
             while(true){
@@ -105,7 +111,7 @@ public class GroupChatServer {
         // 注册当前channel到selector
         socketChannel.register(selector,SelectionKey.OP_READ);
         // 命令行提示
-        System.out.println(socketChannel.getRemoteAddress()+"上线啦！");
+        System.out.println(socketChannel.getRemoteAddress().toString().substring(1)+"上线啦！");
     }
 
     /**
@@ -125,13 +131,13 @@ public class GroupChatServer {
             ByteBuffer buffer = ByteBuffer.allocate(1024);
 
             // 读取客户端数据
-            int cnt = channel.read(buffer);
+            int read = channel.read(buffer);
             // 进行数据处理
-            if(cnt>0){
+            if(read >0){
                 // 将缓冲区的数据转为字符串
-                String msg = new String(buffer.array(),0,cnt);
+                String msg = new String(buffer.array(),0, read);
                 // 输出消息
-                System.out.println("from "+channel.getRemoteAddress()+":"+msg);
+                System.out.println(msg);
                 // 向其他客户端转发消息
                 sendMsgToOtherClients(msg, channel);
             }
@@ -157,7 +163,7 @@ public class GroupChatServer {
      * @description: 向除了channel之外的客户端发送消息
      */
     private void sendMsgToOtherClients(String msg, SocketChannel channel) throws IOException {
-        System.out.println("转发消息中");
+        System.out.println("转发消息中...");
         // 遍历所有socketChannel，并排除当前channel
         for(SelectionKey key: selector.keys()){
             // 通过key获取对应的SocketChannel
@@ -172,6 +178,7 @@ public class GroupChatServer {
                 targetChannel.write(buffer);
             }
         }
+        System.out.println("转发完毕...");
     }
 
     public static void main(String[] args) {
