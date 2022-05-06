@@ -17,7 +17,7 @@ public class HeartbeatServerInitializer extends ChannelInitializer<SocketChannel
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
         // 添加一个netty提供的IdleStateHandler
-        /**
+        /*
          * 说明
          * 1. IdleStateHandler 是 netty 提供的处理空闲状态的处理器
          * 2. long readerIdleTime : 表示多长时间没有读, 就会发送一个心跳检测包检测是否连接
