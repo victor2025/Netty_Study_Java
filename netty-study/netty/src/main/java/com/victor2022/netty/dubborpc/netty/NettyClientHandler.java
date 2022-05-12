@@ -1,9 +1,10 @@
-package com.victor2022.netty.dubborpc.client;
+package com.victor2022.netty.dubborpc.netty;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author victor2022
@@ -25,6 +26,8 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         // 在其他方法会使用ctx，因此先保存下来
         this.context = ctx;
+        System.out.println("channel activated...");
+        ctx.writeAndFlush("test client connection");
     }
 
     /**
@@ -58,9 +61,12 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
      */
     @Override
     public synchronized Object call() throws Exception {
-        context.writeAndFlush(para);
-        // 等待数据返回，channelRead方法获取到服务器的结果后，被唤醒
+        System.out.println("before call");
+        System.out.println("发送消息："+para);
+        this.context.writeAndFlush(para);
+        // 等待数据返回，channelRead方法获取到服务器的结果后，被唤醒wait();
         wait();
+        System.out.println("after call");
         // 返回结果
         return result;
     }

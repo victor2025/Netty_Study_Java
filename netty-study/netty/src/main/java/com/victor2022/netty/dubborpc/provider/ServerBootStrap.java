@@ -1,5 +1,7 @@
 package com.victor2022.netty.dubborpc.provider;
 
+import com.victor2022.netty.dubborpc.netty.NettyServer;
+
 /**
  * @author victor2022
  * @creat 2022/5/12 16:50
@@ -8,6 +10,6 @@ package com.victor2022.netty.dubborpc.provider;
 public class ServerBootStrap {
 
     public static void main(String[] args) {
-        NettyServer.startServer("localhost",8000);
+        NettyServer.startServer("127.0.0.1",8000);
     }
 }

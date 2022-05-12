@@ -24,7 +24,6 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>.MyMessage.DataType data_type = 1;</code>
-     * @return The enum numeric value on the wire for dataType.
      */
     int getDataTypeValue();
     /**
@@ -33,41 +32,36 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>.MyMessage.DataType data_type = 1;</code>
-     * @return The dataType.
      */
-    MyMessage.DataType getDataType();
+    com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType getDataType();
 
     /**
      * <code>.Student student = 2;</code>
-     * @return Whether the student field is set.
      */
     boolean hasStudent();
     /**
      * <code>.Student student = 2;</code>
-     * @return The student.
      */
-    Student getStudent();
+    com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getStudent();
     /**
      * <code>.Student student = 2;</code>
      */
-    StudentOrBuilder getStudentOrBuilder();
+    com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder getStudentOrBuilder();
 
     /**
      * <code>.Worker worker = 3;</code>
-     * @return Whether the worker field is set.
      */
     boolean hasWorker();
     /**
      * <code>.Worker worker = 3;</code>
-     * @return The worker.
      */
-    Worker getWorker();
+    com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getWorker();
     /**
      * <code>.Worker worker = 3;</code>
      */
-    WorkerOrBuilder getWorkerOrBuilder();
+    com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder();
 
-    public MyMessage.DataBodyCase getDataBodyCase();
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataBodyCase getDataBodyCase();
   }
   /**
    * <pre>
@@ -76,7 +70,7 @@ public final class MyDataInfo {
    *
    * Protobuf type {@code MyMessage}
    */
-  public static final class MyMessage extends
+  public  static final class MyMessage extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:MyMessage)
       MyMessageOrBuilder {
@@ -89,14 +83,7 @@ public final class MyDataInfo {
       dataType_ = 0;
     }
 
-    @Override
-    @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MyMessage();
-    }
-
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -107,8 +94,9 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -126,35 +114,35 @@ public final class MyDataInfo {
               break;
             }
             case 18: {
-              Student.Builder subBuilder = null;
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder subBuilder = null;
               if (dataBodyCase_ == 2) {
-                subBuilder = ((Student) dataBody_).toBuilder();
+                subBuilder = ((com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(Student.parser(), extensionRegistry);
+                  input.readMessage(com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Student) dataBody_);
+                subBuilder.mergeFrom((com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 2;
               break;
             }
             case 26: {
-              Worker.Builder subBuilder = null;
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder subBuilder = null;
               if (dataBodyCase_ == 3) {
-                subBuilder = ((Worker) dataBody_).toBuilder();
+                subBuilder = ((com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(Worker.parser(), extensionRegistry);
+                  input.readMessage(com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Worker) dataBody_);
+                subBuilder.mergeFrom((com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 3;
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -164,8 +152,6 @@ public final class MyDataInfo {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -176,15 +162,15 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_MyMessage_descriptor;
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_MyMessage_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_MyMessage_fieldAccessorTable
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_MyMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MyMessage.class, Builder.class);
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.Builder.class);
     }
 
     /**
@@ -227,26 +213,20 @@ public final class MyDataInfo {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
       }
 
       /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static DataType valueOf(int value) {
         return forNumber(value);
       }
 
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
       public static DataType forNumber(int value) {
         switch (value) {
           case 0: return StudentType;
@@ -269,10 +249,6 @@ public final class MyDataInfo {
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -281,7 +257,7 @@ public final class MyDataInfo {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return MyMessage.getDescriptor().getEnumTypes().get(0);
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final DataType[] VALUES = values();
@@ -289,7 +265,7 @@ public final class MyDataInfo {
       public static DataType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -308,10 +284,9 @@ public final class MyDataInfo {
     }
 
     private int dataBodyCase_ = 0;
-    private Object dataBody_;
+    private java.lang.Object dataBody_;
     public enum DataBodyCase
-        implements com.google.protobuf.Internal.EnumLite,
-            InternalOneOfEnum {
+        implements com.google.protobuf.Internal.EnumLite {
       STUDENT(2),
       WORKER(3),
       DATABODY_NOT_SET(0);
@@ -320,11 +295,9 @@ public final class MyDataInfo {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static DataBodyCase valueOf(int value) {
         return forNumber(value);
       }
@@ -356,9 +329,8 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>.MyMessage.DataType data_type = 1;</code>
-     * @return The enum numeric value on the wire for dataType.
      */
-    @Override public int getDataTypeValue() {
+    public int getDataTypeValue() {
       return dataType_;
     }
     /**
@@ -367,78 +339,67 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>.MyMessage.DataType data_type = 1;</code>
-     * @return The dataType.
      */
-    @Override public DataType getDataType() {
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType getDataType() {
       @SuppressWarnings("deprecation")
-      DataType result = DataType.valueOf(dataType_);
-      return result == null ? DataType.UNRECOGNIZED : result;
+      com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType result = com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.valueOf(dataType_);
+      return result == null ? com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.UNRECOGNIZED : result;
     }
 
     public static final int STUDENT_FIELD_NUMBER = 2;
     /**
      * <code>.Student student = 2;</code>
-     * @return Whether the student field is set.
      */
-    @Override
     public boolean hasStudent() {
       return dataBodyCase_ == 2;
     }
     /**
      * <code>.Student student = 2;</code>
-     * @return The student.
      */
-    @Override
-    public Student getStudent() {
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getStudent() {
       if (dataBodyCase_ == 2) {
-         return (Student) dataBody_;
+         return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_;
       }
-      return Student.getDefaultInstance();
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
     }
     /**
      * <code>.Student student = 2;</code>
      */
-    @Override
-    public StudentOrBuilder getStudentOrBuilder() {
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder getStudentOrBuilder() {
       if (dataBodyCase_ == 2) {
-         return (Student) dataBody_;
+         return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_;
       }
-      return Student.getDefaultInstance();
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
     }
 
     public static final int WORKER_FIELD_NUMBER = 3;
     /**
      * <code>.Worker worker = 3;</code>
-     * @return Whether the worker field is set.
      */
-    @Override
     public boolean hasWorker() {
       return dataBodyCase_ == 3;
     }
     /**
      * <code>.Worker worker = 3;</code>
-     * @return The worker.
      */
-    @Override
-    public Worker getWorker() {
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getWorker() {
       if (dataBodyCase_ == 3) {
-         return (Worker) dataBody_;
+         return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_;
       }
-      return Worker.getDefaultInstance();
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
     }
     /**
      * <code>.Worker worker = 3;</code>
      */
-    @Override
-    public WorkerOrBuilder getWorkerOrBuilder() {
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder() {
       if (dataBodyCase_ == 3) {
-         return (Worker) dataBody_;
+         return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_;
       }
-      return Worker.getDefaultInstance();
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -448,73 +409,76 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataType_ != DataType.StudentType.getNumber()) {
+      if (dataType_ != com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.StudentType.getNumber()) {
         output.writeEnum(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
-        output.writeMessage(2, (Student) dataBody_);
+        output.writeMessage(2, (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
-        output.writeMessage(3, (Worker) dataBody_);
+        output.writeMessage(3, (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_);
       }
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (dataType_ != DataType.StudentType.getNumber()) {
+      if (dataType_ != com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.StudentType.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (Student) dataBody_);
+          .computeMessageSize(2, (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (Worker) dataBody_);
+          .computeMessageSize(3, (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof MyMessage)) {
+      if (!(obj instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage)) {
         return super.equals(obj);
       }
-      MyMessage other = (MyMessage) obj;
+      com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage other = (com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage) obj;
 
-      if (dataType_ != other.dataType_) return false;
-      if (!getDataBodyCase().equals(other.getDataBodyCase())) return false;
+      boolean result = true;
+      result = result && dataType_ == other.dataType_;
+      result = result && getDataBodyCase().equals(
+          other.getDataBodyCase());
+      if (!result) return false;
       switch (dataBodyCase_) {
         case 2:
-          if (!getStudent()
-              .equals(other.getStudent())) return false;
+          result = result && getStudent()
+              .equals(other.getStudent());
           break;
         case 3:
-          if (!getWorker()
-              .equals(other.getWorker())) return false;
+          result = result && getWorker()
+              .equals(other.getWorker());
           break;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -540,69 +504,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(byte[] data)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MyMessage parseDelimitedFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static MyMessage parseDelimitedFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MyMessage parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -610,23 +574,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(MyMessage prototype) {
+    public static Builder newBuilder(com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -640,18 +604,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MyMessage)
-        MyMessageOrBuilder {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_MyMessage_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_MyMessage_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_MyMessage_fieldAccessorTable
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_MyMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MyMessage.class, Builder.class);
+                com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.Builder.class);
       }
 
       // Construct using com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.newBuilder()
@@ -660,7 +624,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -669,7 +633,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         dataType_ = 0;
@@ -679,29 +643,29 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_MyMessage_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_MyMessage_descriptor;
       }
 
-      @Override
-      public MyMessage getDefaultInstanceForType() {
-        return MyMessage.getDefaultInstance();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage getDefaultInstanceForType() {
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.getDefaultInstance();
       }
 
-      @Override
-      public MyMessage build() {
-        MyMessage result = buildPartial();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage build() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public MyMessage buildPartial() {
-        MyMessage result = new MyMessage(this);
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage buildPartial() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage result = new com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage(this);
         result.dataType_ = dataType_;
         if (dataBodyCase_ == 2) {
           if (studentBuilder_ == null) {
@@ -722,50 +686,50 @@ public final class MyDataInfo {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.setField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return super.setRepeatedField(field, index, value);
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.addRepeatedField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MyMessage) {
-          return mergeFrom((MyMessage)other);
+        if (other instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage) {
+          return mergeFrom((com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MyMessage other) {
-        if (other == MyMessage.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage other) {
+        if (other == com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.getDefaultInstance()) return this;
         if (other.dataType_ != 0) {
           setDataTypeValue(other.getDataTypeValue());
         }
@@ -787,21 +751,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MyMessage parsedMessage = null;
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MyMessage) e.getUnfinishedMessage();
+          parsedMessage = (com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -811,7 +775,7 @@ public final class MyDataInfo {
         return this;
       }
       private int dataBodyCase_ = 0;
-      private Object dataBody_;
+      private java.lang.Object dataBody_;
       public DataBodyCase
           getDataBodyCase() {
         return DataBodyCase.forNumber(
@@ -833,9 +797,8 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>.MyMessage.DataType data_type = 1;</code>
-       * @return The enum numeric value on the wire for dataType.
        */
-      @Override public int getDataTypeValue() {
+      public int getDataTypeValue() {
         return dataType_;
       }
       /**
@@ -844,11 +807,8 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>.MyMessage.DataType data_type = 1;</code>
-       * @param value The enum numeric value on the wire for dataType to set.
-       * @return This builder for chaining.
        */
       public Builder setDataTypeValue(int value) {
-        
         dataType_ = value;
         onChanged();
         return this;
@@ -859,13 +819,11 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>.MyMessage.DataType data_type = 1;</code>
-       * @return The dataType.
        */
-      @Override
-      public DataType getDataType() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType getDataType() {
         @SuppressWarnings("deprecation")
-        DataType result = DataType.valueOf(dataType_);
-        return result == null ? DataType.UNRECOGNIZED : result;
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType result = com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.valueOf(dataType_);
+        return result == null ? com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -873,10 +831,8 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>.MyMessage.DataType data_type = 1;</code>
-       * @param value The dataType to set.
-       * @return This builder for chaining.
        */
-      public Builder setDataType(DataType value) {
+      public Builder setDataType(com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage.DataType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -891,7 +847,6 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>.MyMessage.DataType data_type = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearDataType() {
         
@@ -901,37 +856,33 @@ public final class MyDataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Student, Student.Builder, StudentOrBuilder> studentBuilder_;
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Student, com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder> studentBuilder_;
       /**
        * <code>.Student student = 2;</code>
-       * @return Whether the student field is set.
        */
-      @Override
       public boolean hasStudent() {
         return dataBodyCase_ == 2;
       }
       /**
        * <code>.Student student = 2;</code>
-       * @return The student.
        */
-      @Override
-      public Student getStudent() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getStudent() {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2) {
-            return (Student) dataBody_;
+            return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_;
           }
-          return Student.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 2) {
             return studentBuilder_.getMessage();
           }
-          return Student.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder setStudent(Student value) {
+      public Builder setStudent(com.victor2022.netty.codecplus.pojo.MyDataInfo.Student value) {
         if (studentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -948,7 +899,7 @@ public final class MyDataInfo {
        * <code>.Student student = 2;</code>
        */
       public Builder setStudent(
-          Student.Builder builderForValue) {
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder builderForValue) {
         if (studentBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -961,11 +912,11 @@ public final class MyDataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder mergeStudent(Student value) {
+      public Builder mergeStudent(com.victor2022.netty.codecplus.pojo.MyDataInfo.Student value) {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2 &&
-              dataBody_ != Student.getDefaultInstance()) {
-            dataBody_ = Student.newBuilder((Student) dataBody_)
+              dataBody_ != com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance()) {
+            dataBody_ = com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.newBuilder((com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -974,9 +925,8 @@ public final class MyDataInfo {
         } else {
           if (dataBodyCase_ == 2) {
             studentBuilder_.mergeFrom(value);
-          } else {
-            studentBuilder_.setMessage(value);
           }
+          studentBuilder_.setMessage(value);
         }
         dataBodyCase_ = 2;
         return this;
@@ -1003,36 +953,35 @@ public final class MyDataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public Student.Builder getStudentBuilder() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder getStudentBuilder() {
         return getStudentFieldBuilder().getBuilder();
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      @Override
-      public StudentOrBuilder getStudentOrBuilder() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder getStudentOrBuilder() {
         if ((dataBodyCase_ == 2) && (studentBuilder_ != null)) {
           return studentBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 2) {
-            return (Student) dataBody_;
+            return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_;
           }
-          return Student.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Student, Student.Builder, StudentOrBuilder>
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Student, com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder> 
           getStudentFieldBuilder() {
         if (studentBuilder_ == null) {
           if (!(dataBodyCase_ == 2)) {
-            dataBody_ = Student.getDefaultInstance();
+            dataBody_ = com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
           }
           studentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Student, Student.Builder, StudentOrBuilder>(
-                  (Student) dataBody_,
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Student, com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder>(
+                  (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -1043,37 +992,33 @@ public final class MyDataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Worker, Worker.Builder, WorkerOrBuilder> workerBuilder_;
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker, com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder> workerBuilder_;
       /**
        * <code>.Worker worker = 3;</code>
-       * @return Whether the worker field is set.
        */
-      @Override
       public boolean hasWorker() {
         return dataBodyCase_ == 3;
       }
       /**
        * <code>.Worker worker = 3;</code>
-       * @return The worker.
        */
-      @Override
-      public Worker getWorker() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getWorker() {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3) {
-            return (Worker) dataBody_;
+            return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_;
           }
-          return Worker.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 3) {
             return workerBuilder_.getMessage();
           }
-          return Worker.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder setWorker(Worker value) {
+      public Builder setWorker(com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker value) {
         if (workerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1090,7 +1035,7 @@ public final class MyDataInfo {
        * <code>.Worker worker = 3;</code>
        */
       public Builder setWorker(
-          Worker.Builder builderForValue) {
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder builderForValue) {
         if (workerBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -1103,11 +1048,11 @@ public final class MyDataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder mergeWorker(Worker value) {
+      public Builder mergeWorker(com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker value) {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3 &&
-              dataBody_ != Worker.getDefaultInstance()) {
-            dataBody_ = Worker.newBuilder((Worker) dataBody_)
+              dataBody_ != com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance()) {
+            dataBody_ = com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.newBuilder((com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -1116,9 +1061,8 @@ public final class MyDataInfo {
         } else {
           if (dataBodyCase_ == 3) {
             workerBuilder_.mergeFrom(value);
-          } else {
-            workerBuilder_.setMessage(value);
           }
+          workerBuilder_.setMessage(value);
         }
         dataBodyCase_ = 3;
         return this;
@@ -1145,36 +1089,35 @@ public final class MyDataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Worker.Builder getWorkerBuilder() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder getWorkerBuilder() {
         return getWorkerFieldBuilder().getBuilder();
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      @Override
-      public WorkerOrBuilder getWorkerOrBuilder() {
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder() {
         if ((dataBodyCase_ == 3) && (workerBuilder_ != null)) {
           return workerBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 3) {
-            return (Worker) dataBody_;
+            return (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_;
           }
-          return Worker.getDefaultInstance();
+          return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Worker, Worker.Builder, WorkerOrBuilder>
+          com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker, com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder> 
           getWorkerFieldBuilder() {
         if (workerBuilder_ == null) {
           if (!(dataBodyCase_ == 3)) {
-            dataBody_ = Worker.getDefaultInstance();
+            dataBody_ = com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
           }
           workerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Worker, Worker.Builder, WorkerOrBuilder>(
-                  (Worker) dataBody_,
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker, com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder, com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder>(
+                  (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -1183,13 +1126,13 @@ public final class MyDataInfo {
         onChanged();;
         return workerBuilder_;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1200,18 +1143,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:MyMessage)
-    private static final MyMessage DEFAULT_INSTANCE;
+    private static final com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new MyMessage();
+      DEFAULT_INSTANCE = new com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage();
     }
 
-    public static MyMessage getDefaultInstance() {
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<MyMessage>
         PARSER = new com.google.protobuf.AbstractParser<MyMessage>() {
-      @Override
+      @java.lang.Override
       public MyMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1224,13 +1167,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MyMessage> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public MyMessage getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.MyMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1246,18 +1189,15 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>int32 id = 1;</code>
-     * @return The id.
      */
     int getId();
 
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -1265,7 +1205,7 @@ public final class MyDataInfo {
   /**
    * Protobuf type {@code Student}
    */
-  public static final class Student extends
+  public  static final class Student extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Student)
       StudentOrBuilder {
@@ -1275,17 +1215,11 @@ public final class MyDataInfo {
       super(builder);
     }
     private Student() {
+      id_ = 0;
       name_ = "";
     }
 
-    @Override
-    @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Student();
-    }
-
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1296,8 +1230,9 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1314,13 +1249,13 @@ public final class MyDataInfo {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1330,8 +1265,6 @@ public final class MyDataInfo {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1342,15 +1275,15 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_Student_descriptor;
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Student_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_Student_fieldAccessorTable
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Student_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Student.class, Builder.class);
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1361,44 +1294,38 @@ public final class MyDataInfo {
      * </pre>
      *
      * <code>int32 id = 1;</code>
-     * @return The id.
      */
-    @Override
     public int getId() {
       return id_;
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
-     * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
     }
     /**
      * <code>string name = 2;</code>
-     * @return The bytes for name.
      */
-    @Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -1407,7 +1334,7 @@ public final class MyDataInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1417,19 +1344,19 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
         output.writeInt32(1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1439,7 +1366,7 @@ public final class MyDataInfo {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, id_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -1447,25 +1374,26 @@ public final class MyDataInfo {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Student)) {
+      if (!(obj instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.Student)) {
         return super.equals(obj);
       }
-      Student other = (Student) obj;
+      com.victor2022.netty.codecplus.pojo.MyDataInfo.Student other = (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) obj;
 
-      if (getId()
-          != other.getId()) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getId()
+          == other.getId());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1481,69 +1409,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(byte[] data)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseDelimitedFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Student parseDelimitedFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1551,23 +1479,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Student prototype) {
+    public static Builder newBuilder(com.victor2022.netty.codecplus.pojo.MyDataInfo.Student prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1577,18 +1505,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Student)
-        StudentOrBuilder {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.StudentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_Student_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Student_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_Student_fieldAccessorTable
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Student_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Student.class, Builder.class);
+                com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.Builder.class);
       }
 
       // Construct using com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.newBuilder()
@@ -1597,7 +1525,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1606,7 +1534,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = 0;
@@ -1616,79 +1544,79 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_Student_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Student_descriptor;
       }
 
-      @Override
-      public Student getDefaultInstanceForType() {
-        return Student.getDefaultInstance();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getDefaultInstanceForType() {
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance();
       }
 
-      @Override
-      public Student build() {
-        Student result = buildPartial();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student build() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Student result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public Student buildPartial() {
-        Student result = new Student(this);
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student buildPartial() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Student result = new com.victor2022.netty.codecplus.pojo.MyDataInfo.Student(this);
         result.id_ = id_;
         result.name_ = name_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.setField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return super.setRepeatedField(field, index, value);
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.addRepeatedField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Student) {
-          return mergeFrom((Student)other);
+        if (other instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) {
+          return mergeFrom((com.victor2022.netty.codecplus.pojo.MyDataInfo.Student)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Student other) {
-        if (other == Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.victor2022.netty.codecplus.pojo.MyDataInfo.Student other) {
+        if (other == com.victor2022.netty.codecplus.pojo.MyDataInfo.Student.getDefaultInstance()) return this;
         if (other.getId() != 0) {
           setId(other.getId());
         }
@@ -1701,21 +1629,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Student parsedMessage = null;
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Student parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Student) e.getUnfinishedMessage();
+          parsedMessage = (com.victor2022.netty.codecplus.pojo.MyDataInfo.Student) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1732,9 +1660,7 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>int32 id = 1;</code>
-       * @return The id.
        */
-      @Override
       public int getId() {
         return id_;
       }
@@ -1744,8 +1670,6 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>int32 id = 1;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
        */
       public Builder setId(int value) {
         
@@ -1759,7 +1683,6 @@ public final class MyDataInfo {
        * </pre>
        *
        * <code>int32 id = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1768,34 +1691,32 @@ public final class MyDataInfo {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
-       * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
        * <code>string name = 2;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -1804,11 +1725,9 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1819,7 +1738,6 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1829,8 +1747,6 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 2;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1843,13 +1759,13 @@ public final class MyDataInfo {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1860,18 +1776,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Student)
-    private static final Student DEFAULT_INSTANCE;
+    private static final com.victor2022.netty.codecplus.pojo.MyDataInfo.Student DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Student();
+      DEFAULT_INSTANCE = new com.victor2022.netty.codecplus.pojo.MyDataInfo.Student();
     }
 
-    public static Student getDefaultInstance() {
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Student>
         PARSER = new com.google.protobuf.AbstractParser<Student>() {
-      @Override
+      @java.lang.Override
       public Student parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1884,13 +1800,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Student> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public Student getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.Student getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1902,26 +1818,23 @@ public final class MyDataInfo {
 
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>int32 age = 2;</code>
-     * @return The age.
      */
     int getAge();
   }
   /**
    * Protobuf type {@code Worker}
    */
-  public static final class Worker extends
+  public  static final class Worker extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:Worker)
       WorkerOrBuilder {
@@ -1932,16 +1845,10 @@ public final class MyDataInfo {
     }
     private Worker() {
       name_ = "";
+      age_ = 0;
     }
 
-    @Override
-    @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Worker();
-    }
-
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1952,8 +1859,9 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1965,7 +1873,7 @@ public final class MyDataInfo {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -1976,7 +1884,7 @@ public final class MyDataInfo {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1986,8 +1894,6 @@ public final class MyDataInfo {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1998,48 +1904,44 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_Worker_descriptor;
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Worker_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_Worker_fieldAccessorTable
+      return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Worker_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Worker.class, Builder.class);
+              com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
-     * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
     }
     /**
      * <code>string name = 1;</code>
-     * @return The bytes for name.
      */
-    @Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -2051,15 +1953,13 @@ public final class MyDataInfo {
     private int age_;
     /**
      * <code>int32 age = 2;</code>
-     * @return The age.
      */
-    @Override
     public int getAge() {
       return age_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2069,10 +1969,10 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (age_ != 0) {
@@ -2081,13 +1981,13 @@ public final class MyDataInfo {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (age_ != 0) {
@@ -2099,25 +1999,26 @@ public final class MyDataInfo {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Worker)) {
+      if (!(obj instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker)) {
         return super.equals(obj);
       }
-      Worker other = (Worker) obj;
+      com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker other = (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getAge()
-          != other.getAge()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && (getAge()
+          == other.getAge());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2133,69 +2034,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(byte[] data)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Worker parseDelimitedFrom(java.io.InputStream input)
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Worker parseDelimitedFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Worker parseFrom(
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2203,23 +2104,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Worker prototype) {
+    public static Builder newBuilder(com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2229,18 +2130,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Worker)
-        WorkerOrBuilder {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.WorkerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_Worker_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Worker_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_Worker_fieldAccessorTable
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Worker_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Worker.class, Builder.class);
+                com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.class, com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.Builder.class);
       }
 
       // Construct using com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.newBuilder()
@@ -2249,7 +2150,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2258,7 +2159,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -2268,79 +2169,79 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_Worker_descriptor;
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.internal_static_Worker_descriptor;
       }
 
-      @Override
-      public Worker getDefaultInstanceForType() {
-        return Worker.getDefaultInstance();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getDefaultInstanceForType() {
+        return com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance();
       }
 
-      @Override
-      public Worker build() {
-        Worker result = buildPartial();
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker build() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public Worker buildPartial() {
-        Worker result = new Worker(this);
+      @java.lang.Override
+      public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker buildPartial() {
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker result = new com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker(this);
         result.name_ = name_;
         result.age_ = age_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.setField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
-        return super.setRepeatedField(field, index, value);
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
-        return super.addRepeatedField(field, value);
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Worker) {
-          return mergeFrom((Worker)other);
+        if (other instanceof com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) {
+          return mergeFrom((com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Worker other) {
-        if (other == Worker.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker other) {
+        if (other == com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -2353,21 +2254,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Worker parsedMessage = null;
+        com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Worker) e.getUnfinishedMessage();
+          parsedMessage = (com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2377,34 +2278,32 @@ public final class MyDataInfo {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
-       * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
        * <code>string name = 1;</code>
-       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -2413,11 +2312,9 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2428,7 +2325,6 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2438,8 +2334,6 @@ public final class MyDataInfo {
       }
       /**
        * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2456,16 +2350,12 @@ public final class MyDataInfo {
       private int age_ ;
       /**
        * <code>int32 age = 2;</code>
-       * @return The age.
        */
-      @Override
       public int getAge() {
         return age_;
       }
       /**
        * <code>int32 age = 2;</code>
-       * @param value The age to set.
-       * @return This builder for chaining.
        */
       public Builder setAge(int value) {
         
@@ -2475,7 +2365,6 @@ public final class MyDataInfo {
       }
       /**
        * <code>int32 age = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearAge() {
         
@@ -2483,13 +2372,13 @@ public final class MyDataInfo {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2500,18 +2389,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Worker)
-    private static final Worker DEFAULT_INSTANCE;
+    private static final com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Worker();
+      DEFAULT_INSTANCE = new com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker();
     }
 
-    public static Worker getDefaultInstance() {
+    public static com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Worker>
         PARSER = new com.google.protobuf.AbstractParser<Worker>() {
-      @Override
+      @java.lang.Override
       public Worker parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2524,13 +2413,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Worker> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public Worker getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.victor2022.netty.codecplus.pojo.MyDataInfo.Worker getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2559,7 +2448,7 @@ public final class MyDataInfo {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\rStudent.proto\"\244\001\n\tMyMessage\022&\n\tdata_ty" +
       "pe\030\001 \001(\0162\023.MyMessage.DataType\022\033\n\007student" +
       "\030\002 \001(\0132\010.StudentH\000\022\031\n\006worker\030\003 \001(\0132\007.Wor" +
@@ -2569,28 +2458,36 @@ public final class MyDataInfo {
       "\001(\t\022\013\n\003age\030\002 \001(\005B3\n#com.victor2022.netty" +
       ".codecplus.pojoB\nMyDataInfoH\001b\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_MyMessage_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_MyMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MyMessage_descriptor,
-        new String[] { "DataType", "Student", "Worker", "DataBody", });
+        new java.lang.String[] { "DataType", "Student", "Worker", "DataBody", });
     internal_static_Student_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Student_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Student_descriptor,
-        new String[] { "Id", "Name", });
+        new java.lang.String[] { "Id", "Name", });
     internal_static_Worker_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Worker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Worker_descriptor,
-        new String[] { "Name", "Age", });
+        new java.lang.String[] { "Name", "Age", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

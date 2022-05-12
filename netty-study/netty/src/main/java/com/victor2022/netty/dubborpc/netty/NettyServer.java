@@ -1,4 +1,4 @@
-package com.victor2022.netty.dubborpc.provider;
+package com.victor2022.netty.dubborpc.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
