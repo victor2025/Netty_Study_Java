@@ -27,7 +27,6 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
         // 在其他方法会使用ctx，因此先保存下来
         this.context = ctx;
         System.out.println("channel activated...");
-        ctx.writeAndFlush("test client connection");
     }
 
     /**

@@ -1,8 +1,11 @@
 package com.victor2022.netty.dubborpc.netty;
 
+import com.victor2022.netty.dubborpc.provider.DogServiceImpl;
 import com.victor2022.netty.dubborpc.provider.HelloServiceImpl;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+
+import java.lang.reflect.Method;
 
 /**
  * @author victor2022
@@ -23,7 +26,23 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         String str = msg.toString();
         if(str.startsWith(prefix)){
             // 若msg满足协议
-            String response = new HelloServiceImpl().hello(str.substring(prefix.length()));
+            // 获取类路径和方法名
+            String classpathAndArgs = str.substring(prefix.length());
+            // 解析
+            String[] arr = classpathAndArgs.split("#");
+            String classpath = arr[0];
+            String methodName = arr[1];
+            String args = classpathAndArgs.substring(classpath.length()+1+methodName.length()+1);
+            // 通过反射，生成对应类的对象，并调用，返回方法
+            String response = null;
+            if(classpath.toLowerCase().contains("helloservice")){
+                HelloServiceImpl helloService = new HelloServiceImpl();
+                Method method = helloService.getClass().getDeclaredMethod(methodName,String.class);
+                response = method.invoke(helloService,args).toString();
+            }else if(classpath.toLowerCase().contains("dogservice")){
+                DogServiceImpl dogService = new DogServiceImpl();
+                response = dogService.getClass().getMethod(methodName, String.class).invoke(dogService,args).toString();
+            }
             // 数据返回
             ctx.writeAndFlush(response);
         }

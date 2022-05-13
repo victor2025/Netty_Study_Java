@@ -35,8 +35,9 @@ public class NettyClient {
                     if(client==null){
                         initClient();
                     }
+                    String aim = serviceClass.getName()+"#"+method.getName()+"#";
                     // 设置要发给服务器的信息
-                    client.setPara(prefix+args[0]);
+                    client.setPara(prefix+aim+args[0]);
                     return executor.submit(client).get();
                 });
     }
